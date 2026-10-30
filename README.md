@@ -1,4 +1,5 @@
 # GridMO v0: multi-objective trajectories on a grid
+### work in progress work
 
 A working starting point for the grid trajectory problem: an agent walks a fixed number of steps from a start to a goal, and each objective adds up how close it is to something (grass, pool, a person) at every step. The framework finds the exact nondominated trajectories, simulates agents, scores any set of trajectories against the exact front, and writes a dataset for the later "environment given → produce plans" model.
 
