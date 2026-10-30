@@ -71,7 +71,7 @@ Every objective adds up a score that depends only on the cell and the step. Two 
 * The 4×4 grid is too small to compare methods: random draws already hit the front. Use 8×8 or larger for comparisons.
 * The explanations in the notebook are drafts; rewrite them in your own words before sharing.
 
-## Open questions
+## Questions to explore
 
 1. Is the formula Σ_t t·2^(−d_t) (later steps count more) or Σ_t 2^(−d_t)? Normalised?
 2. Are 0.6 and 0.4 objective values or an agent's preference weights?
