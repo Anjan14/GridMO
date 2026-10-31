@@ -13,7 +13,7 @@ Six notebooks, one per generative model, all on the same fixed grid and the same
 
 Each notebook writes its per-seed numbers to `results/<model>.json`.
 
-## The test (same in every notebook)
+## Same test across notebooks
 
 * **Grid:** start (4, 1), goal (1, 4), grass (2, 2), pool (3, 3), T = 10 steps. Scores Σ t·2^(−d_t) / Σ t for the grass and the pool, both higher is better.
 * **Ground truth:** all 23,508 trajectories are listed; the exact front has 29 score pairs, shared by 240 trajectories.
@@ -41,7 +41,7 @@ Each notebook writes its per-seed numbers to `results/<model>.json`.
 
 "Valid × on the front (of all)" is the share of all samples that are usable front trajectories, the fairest single number across models because some models produce invalid paths. Here it is the product of the two mean columns; the per-seed values are in `results/*.json`. "Constrained decoding" blocks moves that leave the grid or can no longer reach the goal; only models that write moves in order can use it.
 
-## What the results say
+## Results
 
 * **Every model generates front trajectories it never saw.** They reach 13 to 28 of the 29 front points; random sampling reaches 8.7, and copying training data reaches none.
 * **Decision-Diffuser-style diffusion is best**, on both the GPU (46.9% usable) and the CPU run (45.5%), and was steadier across seeds on the GPU. It repeats itself: only 35% of its samples are distinct.
@@ -69,7 +69,7 @@ Same code and same seeds; the GPU draws different random numbers, so the models 
 
 The top two (Decision Diffuser, LSTM) and the bottom (CVAE) agree on both machines. PCD moved by 12 points, more than its spread across seeds, so 3 seeds understate run-to-run variation.
 
-## Caveats
+## Stuffs/need more planning
 
 * One small grid. Models only have to learn about 23,000 short sequences, so this shows the protocol works; it does not yet show which model scales. The same notebooks run on other settings by changing `CONFIG` (keep T ≤ 12, since every trajectory is listed).
 * Three seeds are too few to rank the middle group; use at least 10 before drawing conclusions about MDLM, the Transformer or PCD.
