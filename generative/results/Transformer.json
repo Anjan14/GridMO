@@ -1,0 +1,202 @@
+{
+ "model": "Transformer",
+ "config": {
+  "rows": 4,
+  "cols": 4,
+  "start": [
+   4,
+   1
+  ],
+  "goal": [
+   1,
+   4
+  ],
+  "landmarks": {
+   "grass": [
+    2,
+    2
+   ],
+   "pool": [
+    3,
+    3
+   ]
+  },
+  "T": 10,
+  "time_weight": "linear",
+  "gamma": 0.9,
+  "hold_out_front": true,
+  "validation_share": 0.1,
+  "n_targets": 20,
+  "samples_per_target": 50,
+  "target_push": 0.05,
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "results_dir": "results"
+ },
+ "summary": {
+  "Transformer, constrained decoding": {
+   "valid": 1.0,
+   "distinct": 0.5163333333333333,
+   "on_front": 0.20166666666666666,
+   "coverage": 0.942528735632184,
+   "hv_ratio": 0.9983378550938827,
+   "target_error": 0.030844623456927955
+  },
+  "Transformer, unconstrained": {
+   "valid": 0.6106666666666667,
+   "distinct": 0.5196486032620056,
+   "on_front": 0.279857323347017,
+   "coverage": 0.8505747126436781,
+   "hv_ratio": 0.9952091122049832,
+   "target_error": 0.02176477949030371
+  },
+  "Random valid trajectories": {
+   "valid": 1.0,
+   "distinct": 0.979,
+   "on_front": 0.011999999999999999,
+   "coverage": 0.2988505747126437,
+   "hv_ratio": 0.9036200530994404,
+   "target_error": null
+  },
+  "Copy closest training trajectories": {
+   "valid": 1.0,
+   "distinct": 0.425,
+   "on_front": 0.0,
+   "coverage": 0.0,
+   "hv_ratio": 0.9290166454617035,
+   "target_error": 0.026942944072243874
+  }
+ },
+ "runs": {
+  "Transformer, constrained decoding": [
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.478,
+    "on_front": 0.197,
+    "coverage": 0.9655172413793104,
+    "hv_ratio": 0.998533401524439,
+    "target_error": 0.02989395387140281
+   },
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.534,
+    "on_front": 0.192,
+    "coverage": 0.896551724137931,
+    "hv_ratio": 0.9970668032952672,
+    "target_error": 0.031770756983017824
+   },
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.537,
+    "on_front": 0.216,
+    "coverage": 0.9655172413793104,
+    "hv_ratio": 0.999413360461942,
+    "target_error": 0.030869159516363234
+   }
+  ],
+  "Transformer, unconstrained": [
+   {
+    "samples": 1000,
+    "valid": 0.604,
+    "distinct": 0.478476821192053,
+    "on_front": 0.2814569536423841,
+    "coverage": 0.8620689655172413,
+    "hv_ratio": 0.9961868443577643,
+    "target_error": 0.02099630621532856
+   },
+   {
+    "samples": 1000,
+    "valid": 0.593,
+    "distinct": 0.5261382799325464,
+    "on_front": 0.2715008431703204,
+    "coverage": 0.7586206896551724,
+    "hv_ratio": 0.9912004103785809,
+    "target_error": 0.022115489802275446
+   },
+   {
+    "samples": 1000,
+    "valid": 0.635,
+    "distinct": 0.5543307086614173,
+    "on_front": 0.2866141732283465,
+    "coverage": 0.9310344827586207,
+    "hv_ratio": 0.9982400818786046,
+    "target_error": 0.02218254245330711
+   }
+  ],
+  "Random valid trajectories": [
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.974,
+    "on_front": 0.011,
+    "coverage": 0.20689655172413793,
+    "hv_ratio": 0.8921317002362125,
+    "target_error": NaN
+   },
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.983,
+    "on_front": 0.011,
+    "coverage": 0.3448275862068966,
+    "hv_ratio": 0.9052577545233988,
+    "target_error": NaN
+   },
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.98,
+    "on_front": 0.014,
+    "coverage": 0.3448275862068966,
+    "hv_ratio": 0.9134707045387098,
+    "target_error": NaN
+   }
+  ],
+  "Copy closest training trajectories": [
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.425,
+    "on_front": 0.0,
+    "coverage": 0.0,
+    "hv_ratio": 0.9290166454617035,
+    "target_error": 0.026942944072243874
+   },
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.425,
+    "on_front": 0.0,
+    "coverage": 0.0,
+    "hv_ratio": 0.9290166454617035,
+    "target_error": 0.026942944072243874
+   },
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.425,
+    "on_front": 0.0,
+    "coverage": 0.0,
+    "hv_ratio": 0.9290166454617035,
+    "target_error": 0.026942944072243874
+   }
+  ]
+ },
+ "extra": {
+  "oracle_targets_seed0": {
+   "samples": 580,
+   "valid": 1.0,
+   "distinct": 0.746551724137931,
+   "on_front": 0.20344827586206896,
+   "coverage": 0.9310344827586207,
+   "hv_ratio": 0.9973601229411017,
+   "target_error": 0.019088949857523536
+  }
+ }
+}

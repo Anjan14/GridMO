@@ -1,0 +1,207 @@
+{
+ "model": "DecisionDiffuser",
+ "config": {
+  "rows": 4,
+  "cols": 4,
+  "start": [
+   4,
+   1
+  ],
+  "goal": [
+   1,
+   4
+  ],
+  "landmarks": {
+   "grass": [
+    2,
+    2
+   ],
+   "pool": [
+    3,
+    3
+   ]
+  },
+  "T": 10,
+  "time_weight": "linear",
+  "gamma": 0.9,
+  "hold_out_front": true,
+  "validation_share": 0.1,
+  "n_targets": 20,
+  "samples_per_target": 50,
+  "target_push": 0.05,
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "results_dir": "results"
+ },
+ "summary": {
+  "Decision-Diffuser style, guidance 2": {
+   "valid": 0.852,
+   "distinct": 0.3425041066045818,
+   "on_front": 0.5313183713278528,
+   "coverage": 0.9425287356321839,
+   "hv_ratio": 0.9979467622327703,
+   "target_error": 0.026561680984590993
+  },
+  "Random valid trajectories": {
+   "valid": 1.0,
+   "distinct": 0.979,
+   "on_front": 0.011999999999999999,
+   "coverage": 0.2988505747126437,
+   "hv_ratio": 0.9036200530994404,
+   "target_error": null
+  },
+  "Copy closest training trajectories": {
+   "valid": 1.0,
+   "distinct": 0.425,
+   "on_front": 0.0,
+   "coverage": 0.0,
+   "hv_ratio": 0.9290166454617035,
+   "target_error": 0.026942944072243874
+  }
+ },
+ "runs": {
+  "Decision-Diffuser style, guidance 2": [
+   {
+    "samples": 1000,
+    "valid": 0.897,
+    "distinct": 0.3188405797101449,
+    "on_front": 0.6120401337792643,
+    "coverage": 1.0,
+    "hv_ratio": 0.9999999997536105,
+    "target_error": 0.026090926363640216
+   },
+   {
+    "samples": 1000,
+    "valid": 0.823,
+    "distinct": 0.41919805589307413,
+    "on_front": 0.3754556500607533,
+    "coverage": 0.896551724137931,
+    "hv_ratio": 0.9967734836494332,
+    "target_error": 0.02795161263313242
+   },
+   {
+    "samples": 1000,
+    "valid": 0.836,
+    "distinct": 0.2894736842105263,
+    "on_front": 0.6064593301435407,
+    "coverage": 0.9310344827586207,
+    "hv_ratio": 0.9970668032952672,
+    "target_error": 0.025642503957000337
+   }
+  ],
+  "Random valid trajectories": [
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.974,
+    "on_front": 0.011,
+    "coverage": 0.20689655172413793,
+    "hv_ratio": 0.8921317002362125,
+    "target_error": NaN
+   },
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.983,
+    "on_front": 0.011,
+    "coverage": 0.3448275862068966,
+    "hv_ratio": 0.9052577545233988,
+    "target_error": NaN
+   },
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.98,
+    "on_front": 0.014,
+    "coverage": 0.3448275862068966,
+    "hv_ratio": 0.9134707045387098,
+    "target_error": NaN
+   }
+  ],
+  "Copy closest training trajectories": [
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.425,
+    "on_front": 0.0,
+    "coverage": 0.0,
+    "hv_ratio": 0.9290166454617035,
+    "target_error": 0.026942944072243874
+   },
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.425,
+    "on_front": 0.0,
+    "coverage": 0.0,
+    "hv_ratio": 0.9290166454617035,
+    "target_error": 0.026942944072243874
+   },
+   {
+    "samples": 1000,
+    "valid": 1.0,
+    "distinct": 0.425,
+    "on_front": 0.0,
+    "coverage": 0.0,
+    "hv_ratio": 0.9290166454617035,
+    "target_error": 0.026942944072243874
+   }
+  ]
+ },
+ "extra": {
+  "oracle_targets_seed0": {
+   "samples": 580,
+   "valid": 0.8775862068965518,
+   "distinct": 0.5579567779960707,
+   "on_front": 0.44793713163064836,
+   "coverage": 0.896551724137931,
+   "hv_ratio": 0.9944269264827584,
+   "target_error": 0.028089837525540274
+  },
+  "guidance_sweep_seed0": {
+   "guidance 0": {
+    "valid": 0.809,
+    "distinct": 0.969,
+    "on the front": 0.004,
+    "front points reached": 0.103,
+    "hypervolume ratio": 0.835,
+    "target error": 0.169
+   },
+   "guidance 1": {
+    "valid": 0.889,
+    "distinct": 0.548,
+    "on the front": 0.348,
+    "front points reached": 1.0,
+    "hypervolume ratio": 1.0,
+    "target error": 0.035
+   },
+   "guidance 2": {
+    "valid": 0.897,
+    "distinct": 0.319,
+    "on the front": 0.612,
+    "front points reached": 1.0,
+    "hypervolume ratio": 1.0,
+    "target error": 0.026
+   },
+   "guidance 2.5": {
+    "valid": 0.912,
+    "distinct": 0.274,
+    "on the front": 0.656,
+    "front points reached": 1.0,
+    "hypervolume ratio": 1.0,
+    "target error": 0.026
+   },
+   "guidance 4": {
+    "valid": 0.898,
+    "distinct": 0.222,
+    "on the front": 0.712,
+    "front points reached": 0.862,
+    "hypervolume ratio": 0.995,
+    "target error": 0.025
+   }
+  }
+ }
+}
